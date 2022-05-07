@@ -133,6 +133,7 @@ With it you can manage your photos, namely:
 # Using in PHP
 
 if you want to upload the generated photo to the server via PHP, then you must write the following in the PHP file:
+
 index.php:
 ```
 <!DOCTYPE html>
