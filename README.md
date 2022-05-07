@@ -129,3 +129,50 @@ With it you can manage your photos, namely:
 * 	49 - G;
 * 	216 - B;
 * 	that, blue will be replaced by violets
+
+# Using in PHP
+
+if you want to upload the generated photo to the server via PHP, then you must write the following in the PHP file:
+index.php:
+```
+<!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    Result:
+    <img id="k" src="tel.png"><br>
+    <form method="post" action="server.php" enctype="multipart/form-data">
+      <input type="url" id="url" name="new_url"><br>
+      <input type="text" id="name" name="new_name"><br>
+      <input type="submit">
+    </form>
+    <script src="https://googleapis.volodya-bot-developer.repl.co/libs/photor.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+  </html>
+```
+script.js:
+```
+  const p = new RemoveBG();
+  let image = document.querySelector("#k");
+  image.src = p.removeWhite(image, "png");
+  document.querySelector("#url").value = image.src;
+  ```
+server.php:
+```
+if (!empty($_POST["new_url"]) && !empty($_POST["new_name"])) {
+    $enc = explode(",", $_POST["new_url"]);
+    $enc = str_replace(" ", "+", $enc[1]);
+    $ens = base64_decode($enc);
+    $new_file = __DIR__."/".$_POST["new_name"].".png(or .jpg, .gif...)";
+    file_put_contents($new_file, $ens);
+}
+```
