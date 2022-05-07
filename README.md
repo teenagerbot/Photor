@@ -113,3 +113,19 @@ With it you can manage your photos, namely:
   ```
   Result:
   ![This is an image](https://googleapis.volodya-bot-developer.repl.co/super.png)
+
+# Explanation
+
+* removeBlack(image, "png"):
+* 	image - your photo tag (you don't need to specify a URL, just a tag, id or class);
+* 	"png" - image extension(file type) which will then turn out;
+* changePixels(image, 41, 169, 235, 158, 49, 216, "png"):
+* 	image - your photo tag (you don't need to specify a URL, just a tag, id or class);
+* 	41 - R;
+* 	169 - G;
+* 	235 - B;
+* 	the top RGB palette for a specific color will be replaced with the next one:
+* 	158 - R;
+* 	49 - G;
+* 	216 - B;
+* 	that, blue will be replaced by violets
