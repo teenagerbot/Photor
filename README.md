@@ -177,3 +177,35 @@ if (!empty($_POST["new_url"]) && !empty($_POST["new_name"])) {
     file_put_contents($new_file, $ens);
 }
 ```
+# NEW FUNCTIONS
+
+# Now this library has 5 more functions. Namely:
+* red color removal
+* removal of yellow
+* blue color removal
+* purple removal
+* gray color removal
+# to remove the red:
+```
+.removeRed(image, "png");
+```
+
+# to remove the yellow:
+```
+.removeYellow(image, "png");
+```
+
+# to remove the blue:
+```
+.removeBlue(image, "png");
+```
+
+# to remove the violet:
+```
+.removeViolet(image, "png");
+```
+
+# to remove the gray:
+```
+.removeGray(image, "png");
+```
