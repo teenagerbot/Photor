@@ -43,7 +43,7 @@ With it you can manage your photos, namely:
   ```
   JS(script.js):
   ```
-  const p = new RemoveBG();
+  const p = new Photor();
   let image = document.querySelector("#k");
   //Removing the black background
   image.src = p.removeBlack(image, "png");
@@ -77,7 +77,7 @@ With it you can manage your photos, namely:
   ```
   JS(script.js):
   ```
-  const p = new RemoveBG();
+  const p = new Photor();
   let image = document.querySelector("#k");
   //Removing the white background
   image.src = p.removeWhite(image, "png");
@@ -110,7 +110,7 @@ With it you can manage your photos, namely:
   ```
   JS(script.js):
   ```
-  const p = new RemoveBG();
+  const p = new Photor();
   let image = document.querySelector("#k");
   //change the pixel colors
   image.src = p.changePixels(image, 41, 169, 235, 158, 49, 216, "png");
@@ -170,7 +170,7 @@ index.php:
 ```
 script.js:
 ```
-  const p = new RemoveBG();
+  const p = new Photor();
   let image = document.querySelector("#k");
   image.src = p.removeWhite(image, "png");
   document.querySelector("#url").value = image.src;
@@ -242,7 +242,7 @@ Remember I wrote in version 1.0 that we can only change ONE pixel at a time.
 So, now you can change MULTIPLE colors for pixels at ONE time:
 
 ```
-const p = new RemoveBG();
+const p = new Photor();
 let image = document.querySelector("#k");
 image.src = p.changePixels(image, "jpg", [255, 242, 0, 255, 0, 0], [63, 63, 63, 255, 0, 0], [165, 63, 79, 255, 0, 0]);
 ```
@@ -278,7 +278,7 @@ So the method itself:
 Example:
 
 ```
-const p = new RemoveBG();
+const p = new Photor();
 let image = document.querySelector("#k");
 let y = p.removeWhite(image, "gif");
 let u = p.downloadImage(y, "aba.gif");
