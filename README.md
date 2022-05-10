@@ -3,6 +3,7 @@ this photo library
 
 # Today I present to you my new library
 
+fjghjh [Using in NODE.js][Using in NODE.js]
 With it you can manage your photos, namely:
 
 * Removing the white background;
@@ -130,6 +131,10 @@ With it you can manage your photos, namely:
 * 	216 - B;
 * 	that, blue will be replaced by violets
 
+# Attention:
+
+this method allows you to change the color of ONE pixel and only ONE time
+
 # Using in PHP
 
 if you want to upload the generated photo to the server via PHP, then you must write the following in the PHP file:
@@ -177,6 +182,22 @@ if (!empty($_POST["new_url"]) && !empty($_POST["new_name"])) {
     file_put_contents($new_file, $ens);
 }
 ```
+
+# Using in NODE.js
+
+if you want to upload the generated photo to the server via NODE.js, then you must write the following in the NODE.js file:
+
+index.js:
+```
+"use stict";
+const fs = require("fs");
+//let data = "BLOB that you are transmitting through your transmission channel";
+//for example:
+let data = "data:image/png;base64,iVBOhRZ3xRG2cTWqS4nCkhgMyBUocVVqhV5hxV2x0cotYPRBtcSdXzAlbTUV...";
+let buff = new Buffer(data, "base64");
+fs.writeFileSync("hello.png", buff);
+```
+
 # NEW FUNCTIONS
 
 # Now this library has 5 more functions. Namely:
