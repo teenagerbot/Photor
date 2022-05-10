@@ -4,7 +4,8 @@ this photo library
 # Today I present to you my new library
 * Version [1.0](#1.0)
 * Version [1.1](#1.1)
-* Version [1.2](#1.3)(best version)
+* Version [1.2](#1.3)
+* Version [1.3](#1.4)(best version)
 
 With it you can manage your photos, namely:
 <a name="1.0"></a> 
@@ -259,3 +260,42 @@ The colors of those areas that I showed with arrows, we will change to red
 
 Result:
 ![This is an image](https://googleapis.volodya-bot-developer.repl.co/два.png)
+
+<a name="1.4"></a>
+
+# Yahooo, 
+
+Now it is possible to upload your generated photo and add to the site not so scary links like this one:
+data\:image/png;...
+
+now there is a new method for uploading photos, !!!attention:
+all photos that you will process with the following method will be available on my server (all photos will be sent there in order to shorten the link to the image for you)
+
+So the method itself:
+
+```.downloadImage(source, "you_name_for_image");```
+
+Example:
+
+```
+const p = new RemoveBG();
+let image = document.querySelector("#k");
+let y = p.removeWhite(image, "gif");
+let u = p.downloadImage(y, "aba.gif");
+setTimeout(() => {
+	image.src = u;
+}, 2000);
+```
+
+y - the creepy link data\:image/png;...
+aba.gif - new link
+
+in order to insert a new link into the <img> tag, be sure to delay it, otherwise you will not see the result
+
+delay:
+
+```
+setTimeout(() => {
+	image.src = u;
+}, 2000);
+```
