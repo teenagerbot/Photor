@@ -2,8 +2,7 @@
 this photo library
 
 # Today I present to you my new library
-
-fjghjh [Using in NODE.js][Using in NODE.js]
+[Текст ссылки](#NEW FUNCTIONS)
 With it you can manage your photos, namely:
 
 * Removing the white background;
@@ -198,7 +197,7 @@ let buff = new Buffer(data, "base64");
 fs.writeFileSync("hello.png", buff);
 ```
 
-# NEW FUNCTIONS
+<a name="NEW FUNCTIONS"></a>
 
 # Now this library has 5 more functions. Namely:
 * red color removal
