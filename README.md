@@ -2,9 +2,12 @@
 this photo library
 
 # Today I present to you my new library
-[Текст ссылки](#твоё_название)
-With it you can manage your photos, namely:
+* Version [1.0](#1.0)
+* Version [1.1](#1.1)
+* Version [1.2](#1.3)(best version)
 
+With it you can manage your photos, namely:
+<a name="1.0"></a> 
 * Removing the white background;
 * Removing the black background;
 * Change the pixel colors of your photo;
@@ -196,7 +199,7 @@ let data = "data:image/png;base64,iVBOhRZ3xRG2cTWqS4nCkhgMyBUocVVqhV5hxV2x0cotYP
 let buff = new Buffer(data, "base64");
 fs.writeFileSync("hello.png", buff);
 ```
-
+<a name="1.1"></a> 
 # NEW FUNCTIONS
 
 # Now this library has 5 more functions. Namely:
@@ -209,7 +212,7 @@ fs.writeFileSync("hello.png", buff);
 ```
 .removeRed(image, "png");
 ```
-<a name="твоё_название"></a> 
+
 # to remove the yellow:
 ```
 .removeYellow(image, "png");
@@ -229,3 +232,29 @@ fs.writeFileSync("hello.png", buff);
 ```
 .removeGray(image, "png");
 ```
+
+<a name="1.3"></a>
+
+# Release
+
+Remember I wrote in version 1.0 that we can only change ONE pixel at a time.
+So, now you can change MULTIPLE colors for pixels at ONE time:
+
+```
+const p = new RemoveBG();
+let image = document.querySelector("#k");
+image.src = p.changePixels(image, "jpg", [255, 242, 0, 255, 0, 0], [63, 63, 63, 255, 0, 0], [165, 63, 79, 255, 0, 0]);
+```
+
+# Explanation
+
+[255, 242, 0, 255, 0, 0], [63, 63, 63, 255, 0, 0], [165, 63, 79, 255, 0, 0] - this is an array in which you can change the colors of the pixels
+in this case, we change the color three times for different pixels (because we have three arrays)
+for example: [255, 242, 0, 255, 0, 0]:
+All the pixels that we are looking for with the color rgb (255, 242, 0), we change to the color rgb (255, 0, 0), that is, red
+
+Original:
+![This is an image](https://googleapis.volodya-bot-developer.repl.co/раз.png)
+The colors of those areas that I showed with arrows, we will change to red
+Result:
+![This is an image](https://googleapis.volodya-bot-developer.repl.co/два.png)
