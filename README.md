@@ -256,5 +256,6 @@ All the pixels that we are looking for with the color rgb (255, 242, 0), we chan
 Original:
 ![This is an image](https://googleapis.volodya-bot-developer.repl.co/раз.png)
 The colors of those areas that I showed with arrows, we will change to red
+
 Result:
 ![This is an image](https://googleapis.volodya-bot-developer.repl.co/два.png)
