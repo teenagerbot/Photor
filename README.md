@@ -190,7 +190,7 @@ if (!empty($_POST["new_url"]) && !empty($_POST["new_name"])) {
 
 if you want to upload the generated photo to the server via NODE.js, then you must write the following in the NODE.js file:
 
-index.js:
+index.js(old version):
 ```
 "use stict";
 const fs = require("fs");
@@ -199,6 +199,10 @@ const fs = require("fs");
 let data = "data:image/png;base64,iVBOhRZ3xRG2cTWqS4nCkhgMyBUocVVqhV5hxV2x0cotYPRBtcSdXzAlbTUV...";
 let buff = new Buffer(data, "base64");
 fs.writeFileSync("hello.png", buff);
+```
+index.js(new version):
+```
+Buffer.from(data.replace('data:...; base64,', ''), 'base64');
 ```
 <a name="1.1"></a> 
 # NEW FUNCTIONS
