@@ -327,10 +327,15 @@ Functions:
 - .removePureBlue()
 
 Now compare the result obtained with the old white background removal function and the new one:
+
+Original:
+
+<img src="https://user-images.githubusercontent.com/91476715/171877769-67da4079-3fbd-4b2c-b264-c4af020e227b.png" width="200px">
+
 Old:
 
-![image](https://user-images.githubusercontent.com/91476715/171877258-20f9184e-3303-47b3-9aa3-38f156250f0d.png)
+<img src="https://user-images.githubusercontent.com/91476715/171877258-20f9184e-3303-47b3-9aa3-38f156250f0d.png" width="200px">
 
 New:
 
-![image](https://user-images.githubusercontent.com/91476715/171877443-beed95b2-2e69-4d71-a291-a2dc12a946f4.png)
+<img src="https://user-images.githubusercontent.com/91476715/171877443-beed95b2-2e69-4d71-a291-a2dc12a946f4.png" width="200px">
