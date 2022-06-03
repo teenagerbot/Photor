@@ -5,7 +5,8 @@ this photo library
 * Version [1.0](#1.0)
 * Version [1.1](#1.1)
 * Version [1.2](#1.3)
-* Version [1.3](#1.4)(best version)
+* Version [1.3](#1.4)
+* Version [1.4](#1.5)(best version)
 
 With it you can manage your photos, namely:
 <a name="1.0"></a> 
@@ -303,3 +304,33 @@ setTimeout(() => {
 	image.src = u;
 }, 2000);
 ```
+
+<a name="1.5"></a>
+#  Version 1.4
+
+There were many functions in the old versions of the library, but the problem was that when removing a white or black ... background, the program searched for all pixels with shades of white, black ..., and as a result, the picture after the operation was not always good, but today I will introduce you new functions that remove PURE white, black, red, blue and green colors.
+
+```
+const p = new Photor();
+let image = document.querySelector("#k");
+let y = p.removePureWhite(image, "png");
+let u = p.downloadImage(y, "aba.png");
+setTimeout(() => {
+	image.src = u;
+}, 2000);
+```
+Functions: 
+- .removePureWhite()
+- .removePureBlack()
+- .removePureRed()
+- .removePureGreen()
+- .removePureBlue()
+
+Now compare the result obtained with the old white background removal function and the new one:
+Old:
+
+![image](https://user-images.githubusercontent.com/91476715/171877258-20f9184e-3303-47b3-9aa3-38f156250f0d.png)
+
+New:
+
+![image](https://user-images.githubusercontent.com/91476715/171877443-beed95b2-2e69-4d71-a291-a2dc12a946f4.png)
